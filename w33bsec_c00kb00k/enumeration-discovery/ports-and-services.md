@@ -12,13 +12,13 @@ description: Nmap commands, localhost port scan and more
 
 ## 🔍 Nmap Stealth Scan with Service & Script Detection
 
-### **📌 Command**
+#### **📌 Command**
 
 ```bash
 nmap -sSVC -p- <IP> -v -oN FILE.txt
 ```
 
-### **📝 Explanation**
+#### **📝 Explanation**
 
 This Nmap command performs a **stealth scan** with **service and script detection** while scanning **all ports**.
 
@@ -34,13 +34,13 @@ This Nmap command performs a **stealth scan** with **service and script detectio
 
 ## 🔍 Nmap UDP Scan for Top 100 Ports
 
-### **📌 Command**
+#### **📌 Command**
 
 ```bash
 nmap -sU --top-ports 100 <IP>
 ```
 
-### **📝 Explanation**
+#### **📝 Explanation**
 
 This Nmap command scans the **top 100 most common UDP ports**, which is useful for detecting services like DNS, SNMP, and TFTP.
 
@@ -56,13 +56,13 @@ If you need to quickly check for **open ports** on `localhost` without using `nm
 
 ***
 
-### **📌 Command:**
+#### **📌 Command:**
 
 ```bash
 for port in {1..65535}; do (echo >/dev/tcp/127.0.0.1/$port) &>/dev/null && echo "Port $port - OPEN"; done
 ```
 
-### **📝 Explanation**
+#### **📝 Explanation**
 
 | Component                                      | Description                                    |
 | ---------------------------------------------- | ---------------------------------------------- |

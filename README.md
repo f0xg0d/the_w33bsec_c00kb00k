@@ -9,6 +9,7 @@ description: Useful commands with explanations and references
 * [Start](./)
 * [Enumeration / Discovery](w33bsec_c00kb00k/enumeration-discovery/)
   * [Ports & Services](w33bsec_c00kb00k/enumeration-discovery/ports-and-services.md)
+  * [Active Directory](w33bsec_c00kb00k/enumeration-discovery/active-directory.md)
   * [Subdomains](w33bsec_c00kb00k/enumeration-discovery/subdomains.md)
   * [Web: Files & Folders](w33bsec_c00kb00k/enumeration-discovery/web-files-and-folders.md)
 * [Privilege Escalation](w33bsec_c00kb00k/privilege-escalation/)

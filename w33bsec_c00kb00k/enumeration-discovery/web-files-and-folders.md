@@ -2,13 +2,13 @@
 
 ## 📂 FFuF for Directory & File Discovery
 
-### **📌 Command**
+#### **📌 Command**
 
 ```bash
 ffuf -u http://example.com/FUZZ -w <WORDLIST> -ac
 ```
 
-### **📝 Explanation**
+#### **📝 Explanation**
 
 This FFuF command brute-forces directories and files on a target **by injecting FUZZ** into the URL path.
 
@@ -22,13 +22,13 @@ This FFuF command brute-forces directories and files on a target **by injecting 
 
 ## 📂 Dirsearch for Directory & File Discovery
 
-### **📌 Command**
+#### **📌 Command**
 
 ```bash
 dirsearch -u http://example.com -w <WORDLIST> -r -e*
 ```
 
-### **📝 Explanation**
+#### **📝 Explanation**
 
 This Dirsearch brute-forces directories and files on a target recursively with file types.
 

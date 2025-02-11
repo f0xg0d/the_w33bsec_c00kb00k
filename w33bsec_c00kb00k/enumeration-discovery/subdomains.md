@@ -2,13 +2,13 @@
 
 ## 🌍 FFuF for Subdomain Discovery
 
-### **📌 Command**
+#### **📌 Command**
 
 ```bash
 ffuf -u http://example.com/ -w <WORDLIST> -H "Host: FUZZ.example.com" -ac
 ```
 
-### **📝 Explanation**
+#### **📝 Explanation**
 
 This FFuF command brute-forces **subdomains** by injecting words into the `Host` header.
 

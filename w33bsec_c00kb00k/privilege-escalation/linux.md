@@ -10,7 +10,7 @@ When escalating privileges, one of the **fastest** ways to transfer and execute 
 
 ***
 
-### &#x20;**📌 Attacker: Start a Simple Web Server**
+#### &#x20;**📌 Attacker: Start a Simple Web Server**
 
 Run the following command on your **attacking machine** (Kali, Parrot, etc.) to serve files from the current directory:
 
@@ -18,7 +18,7 @@ Run the following command on your **attacking machine** (Kali, Parrot, etc.) to 
 python3 -m http.server 80
 ```
 
-### &#x20;**📌 Victim: Download & Execute LinPEAS**
+#### &#x20;**📌 Victim: Download & Execute LinPEAS**
 
 On the **target machine**, download and execute LinPEAS in one step:
 

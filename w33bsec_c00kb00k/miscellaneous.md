@@ -1,5 +1,5 @@
 ---
-description: Miscellaneous useful commands and infos
+description: Miscellaneous useful commands, infos and torubleshooting
 ---
 
 # Miscellaneous
@@ -10,7 +10,7 @@ Sometimes, when you get a **reverse shell**, it's limited and doesn't support fe
 
 ***
 
-### &#x20;**📌 Spawning a TTY Shell in Bash**
+#### &#x20;**📌 Spawning a TTY Shell in Bash**
 
 ```bash
 python3 -c 'import pty; pty.spawn("/bin/bash")'
@@ -43,3 +43,20 @@ export TERM=xterm
 * Enables **arrow keys, tab completion, and job control**
 * Prevents command execution issues in limited shells
 
+## 🕔 NTP sync with DC
+
+```bash
+sudo timedatectl set-local-rtc 0
+sudo timedatectl set-ntp 1
+sudo ntpdate -u IP -b
+```
+
+#### **📝** Explanation
+
+This set of commands is used to **synchronize the system time** with an **NTP (Network Time Protocol) server** and ensure the system clock is managed correctly.
+
+| Command                            | Description                                                                                                           |
+| ---------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| `sudo timedatectl set-local-rtc 0` | Configures the system to **use UTC** instead of local time, ensuring time consistency across applications.            |
+| `sudo timedatectl set-ntp 1`       | Enables **NTP (Network Time Protocol)** to allow automatic time synchronization.                                      |
+| `sudo ntpdate -u <IP> -b`          | Manually synchronizes the system time with an **NTP server at `<IP>`**, forcing an update with `-b` (immediate sync). |

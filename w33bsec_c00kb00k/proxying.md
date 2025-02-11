@@ -16,7 +16,7 @@ When working on **internal network enumeration** or **pivoting**, **Chisel** com
 
 ***
 
-### **1️⃣ Attacker: Start Chisel Server**
+#### **1️⃣ Attacker: Start Chisel Server**
 
 On your **attacking machine (Kali, Parrot, etc.)**, start a **Chisel server** that listens for reverse connections:
 
@@ -28,7 +28,7 @@ chisel server --reverse -p 9001 --socks5 -v
 
 <table><thead><tr><th>Command</th><th>Description</th><th data-hidden></th></tr></thead><tbody><tr><td><code>--reverse</code></td><td>Allows reverse tunneling (victim connects back to attacker)</td><td></td></tr><tr><td><code>-p 9001</code></td><td>Runs the Chisel server on <strong>port 9001</strong></td><td></td></tr><tr><td><code>--socks5</code></td><td>Enables a <strong>SOCKS5 proxy</strong></td><td></td></tr><tr><td><code>-v</code></td><td><strong>Verbose mode</strong> for debugging</td><td></td></tr></tbody></table>
 
-### **2️⃣ Configuring ProxyChains**
+#### **2️⃣ Configuring ProxyChains**
 
 To tunnel traffic through the compromised host, edit **ProxyChains configuration** on the attacker’s machine:
 
@@ -46,7 +46,7 @@ socks5 127.0.0.1 1080
 
 `127.0.0.1 1080` → **SOCKS5 proxy is running locally on port 1080**
 
-### **3️⃣ Victim: Connect Back to Attacker**
+#### **3️⃣ Victim: Connect Back to Attacker**
 
 On the **compromised target**, download and execute Chisel:
 
@@ -60,7 +60,7 @@ chmod +x chisel
 * Connects **back to the attacker’s Chisel server (10.10.14.21:9001)**
 * `R:socks` → Creates a **SOCKS proxy tunnel**
 
-### **4️⃣ Using ProxyChains for Access**
+#### **4️⃣ Using ProxyChains for Access**
 
 Once the tunnel is established, **route your tools through the compromised host** using ProxyChains.
 
