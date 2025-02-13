@@ -1,8 +1,6 @@
 # Subdomains
 
-## 🌍 FFuF for Subdomain Discovery
-
-#### **📌 Command**
+## FFuF for Subdomain Discovery
 
 ```bash
 ffuf -u http://example.com/ -w <WORDLIST> -H "Host: FUZZ.example.com" -ac

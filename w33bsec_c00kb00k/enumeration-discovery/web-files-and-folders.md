@@ -1,8 +1,6 @@
 # Web: Files & Folders
 
-## 📂 FFuF for Directory & File Discovery
-
-#### **📌 Command**
+## FFuF for Directory & File Discovery
 
 ```bash
 ffuf -u http://example.com/FUZZ -w <WORDLIST> -ac
@@ -20,9 +18,7 @@ This FFuF command brute-forces directories and files on a target **by injecting 
 
 
 
-## 📂 Dirsearch for Directory & File Discovery
-
-#### **📌 Command**
+## Dirsearch for Directory & File Discovery
 
 ```bash
 dirsearch -u http://example.com -w <WORDLIST> -r -e*

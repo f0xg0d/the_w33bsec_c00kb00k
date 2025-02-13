@@ -4,7 +4,9 @@ description: Miscellaneous useful commands, infos and torubleshooting
 
 # Miscellaneous
 
-## 🛠️ Upgrading Shells with Python
+## Quality of Life
+
+### 🛠️ Upgrading Shells with Python
 
 Sometimes, when you get a **reverse shell**, it's limited and doesn't support features like job control (`Ctrl + Z` / `fg`), command history, or tab completion. You can upgrade your shell using Python’s **PTY module** to make it fully interactive.
 
@@ -43,7 +45,9 @@ export TERM=xterm
 * Enables **arrow keys, tab completion, and job control**
 * Prevents command execution issues in limited shells
 
-## 🕔 NTP sync with DC
+## Troubleshooting
+
+### 🕔 NTP sync with DC / KRB\_AP\_ERR\_SKEW(Clock skew too great)
 
 ```bash
 sudo timedatectl set-local-rtc 0

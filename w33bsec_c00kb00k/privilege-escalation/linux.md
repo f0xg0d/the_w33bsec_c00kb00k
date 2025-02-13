@@ -12,7 +12,7 @@ When escalating privileges, one of the **fastest** ways to transfer and execute 
 
 #### &#x20;**📌 Attacker: Start a Simple Web Server**
 
-Run the following command on your **attacking machine** (Kali, Parrot, etc.) to serve files from the current directory:
+Run the following command on your **attacking machine** to serve files from the current directory:
 
 ```bash
 python3 -m http.server 80

@@ -10,9 +10,9 @@ description: Nmap commands, localhost port scan and more
 * [Nmap UDP Scan](ports-and-services.md#nmap-udp-scan-for-top-100-ports)
 * [Local Port Scanning with Bash](ports-and-services.md#local-port-scanning-with-bash)
 
-## 🔍 Nmap Stealth Scan with Service & Script Detection
+## 🔍 Nmap
 
-#### **📌 Command**
+### &#x20;🔍 Nmap Stealth Scan with Service & Script Detection
 
 ```bash
 nmap -sSVC -p- <IP> -v -oN FILE.txt
@@ -32,9 +32,7 @@ This Nmap command performs a **stealth scan** with **service and script detectio
 | `-v`           | Verbose output          |
 | `-oN FILE.txt` | Save output to a file   |
 
-## 🔍 Nmap UDP Scan for Top 100 Ports
-
-#### **📌 Command**
+### 🔍 Nmap UDP Scan for Top 100 Ports
 
 ```bash
 nmap -sU --top-ports 100 <IP>
@@ -55,8 +53,6 @@ This Nmap command scans the **top 100 most common UDP ports**, which is useful f
 If you need to quickly check for **open ports** on `localhost` without using `nmap`, you can use a **simple Bash loop** to scan all **65,535 ports**.
 
 ***
-
-#### **📌 Command:**
 
 ```bash
 for port in {1..65535}; do (echo >/dev/tcp/127.0.0.1/$port) &>/dev/null && echo "Port $port - OPEN"; done
