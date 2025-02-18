@@ -13,4 +13,4 @@
   * [Linux](w33bsec_c00kb00k/privilege-escalation/linux.md)
   * [Windows](w33bsec_c00kb00k/privilege-escalation/windows.md)
 * [Miscellaneous](w33bsec_c00kb00k/miscellaneous.md)
-* [Proxying \ PortForwarding](w33bsec_c00kb00k/proxying-portforwarding.md)
+* [Proxying \ Port Forwarding](w33bsec_c00kb00k/proxying-portforwarding.md)

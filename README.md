@@ -17,6 +17,8 @@ description: Useful commands with explanations and references
   * [Linux](w33bsec_c00kb00k/privilege-escalation/linux.md)
   * [Windows](w33bsec_c00kb00k/privilege-escalation/windows.md)
 * [Miscellaneous](w33bsec_c00kb00k/miscellaneous.md)
+  * [Quality of Life](w33bsec_c00kb00k/miscellaneous.md#quality-of-life)
+  * [Troubleshooting](w33bsec_c00kb00k/miscellaneous.md#troubleshooting)
 * [Proxying](w33bsec_c00kb00k/proxying-portforwarding.md)
   * [Chisel](w33bsec_c00kb00k/proxying-portforwarding.md#chisel-and-proxychains-tunneling-and-pivoting)
   * [SSH Local Port forwarding](w33bsec_c00kb00k/proxying-portforwarding.md#ssh-local-port-forwarding)
