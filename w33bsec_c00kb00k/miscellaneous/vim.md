@@ -6,16 +6,17 @@
 
 | Keys                                              | Function                                  |
 | ------------------------------------------------- | ----------------------------------------- |
-| <mark style="color:$success;">i</mark>            | Enter insert mode                         |
+| <mark style="color:$success;">i / a</mark>        | Enter insert mode                         |
 | <mark style="color:$danger;">ESC</mark>           | Exit insert mode                          |
-| <mark style="color:$danger;">CTRL + v</mark>      | Visual Block Mode                         |
+| <mark style="color:$danger;">Ctrl + v</mark>      | Visual Block Mode                         |
 | <mark style="color:$warning;">y</mark>            | Copy                                      |
 | <mark style="color:$warning;">d</mark>            | Cut                                       |
 | <mark style="color:$warning;">P / p</mark>        | Paste before / paste after cursor         |
-|                                                   |                                           |
-|                                                   |                                           |
-|                                                   |                                           |
-|                                                   |                                           |
+| <mark style="color:$success;">u</mark>            | Undo                                      |
+| <mark style="color:$success;">Ctrl + r</mark>     | Redo                                      |
+| <mark style="color:$success;">dd</mark>           | Cut line                                  |
+| <mark style="color:$success;">gg</mark>           | Jump to first line of file                |
+| <mark style="color:$success;">G</mark>            | Jump to last line of file                 |
 | <mark style="color:$success;">:set bg=dark</mark> | Improve readability on dark background    |
 | <mark style="color:$success;">:q!</mark>          | Force quit current buffer and exit        |
 | <mark style="color:$success;">:qa!</mark>         | Force quit all buffers and exit           |
