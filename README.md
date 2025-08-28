@@ -1,5 +1,5 @@
 ---
-description: Useful commands with explanations and references
+description: Linux Chad c00kb00k that started focused on HTB/CTFs
 ---
 
 # Start
@@ -16,12 +16,15 @@ description: Useful commands with explanations and references
 * [Privilege Escalation](w33bsec_c00kb00k/privilege-escalation/)
   * [Linux](w33bsec_c00kb00k/privilege-escalation/linux.md)
   * [Windows](w33bsec_c00kb00k/privilege-escalation/windows.md)
-* [Miscellaneous](w33bsec_c00kb00k/miscellaneous.md)
-  * [Quality of Life](w33bsec_c00kb00k/miscellaneous.md#quality-of-life)
-  * [Troubleshooting](w33bsec_c00kb00k/miscellaneous.md#troubleshooting)
+* [Miscellaneous](w33bsec_c00kb00k/miscellaneous/)
+  * [Quality of Life](w33bsec_c00kb00k/miscellaneous/quality-of-life.md)
+  * [Troubleshooting](w33bsec_c00kb00k/miscellaneous/troubleshooting.md)
+  * [Vim](w33bsec_c00kb00k/miscellaneous/vim.md)
 * [Proxying](w33bsec_c00kb00k/proxying-portforwarding.md)
   * [Chisel](w33bsec_c00kb00k/proxying-portforwarding.md#chisel-and-proxychains-tunneling-and-pivoting)
   * [SSH Local Port forwarding](w33bsec_c00kb00k/proxying-portforwarding.md#ssh-local-port-forwarding)
+* APK hacking
+* Web Application Hacking
 
 ## To-Do / Ideas:
 
