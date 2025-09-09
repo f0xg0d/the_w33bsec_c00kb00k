@@ -16,3 +16,7 @@ This FFuF command brute-forces **subdomains** by injecting words into the `Host`
 | `-w`   | **Wordlist** for subdomains                                  |
 | `-H`   | Injects **FUZZ** into the `Host` header (`FUZZ.example.com`) |
 | `-ac`  | **Auto-calibration**, filters out false positives            |
+
+## Using gobuster
+
+gobuster vhost -u TARGET -w /usr/share/seclists/Discovery/DNS/combined\_subdomains.txt --append-domain -t 50

