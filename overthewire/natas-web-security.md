@@ -18,6 +18,7 @@ Next Password:    0nzCigAq7t2iALyvU9xcHlYN4MlkIwlq
 URL:              http://natas1.natas.labs.overthewire.org
 ```
 
+\
 Page says right clicking has been blocked - However the block is done in correctly and does not apply to the whole page. Even if it was CTRL + SHIFT + I (Firefox) would bypass this block\
 Once the inspector is open the password can once again be found inside a comment
 
@@ -53,6 +54,27 @@ Going to /s3cr3t/ revealed another users.txt inside it with the next password
 
 ```
 Username:         natas4
-Next Password:    
-URL:              http://natas3.natas.labs.overthewire.org
+Next Password:    0n35PkggAPm2zbEpOU802c0x0Msn1ToK
+URL:              http://natas4.natas.labs.overthewire.org
 ```
+
+Visiting the site it practically tells you what to do:
+
+> Access disallowed. You are visiting from "http://natas4.natas.labs.overthewire.org/index.php" while authorized users should come only from "http://natas5.natas.labs.overthewire.org
+
+So my solution was:
+
+```
+curl http://natas4.natas.labs.overthewire.org/index.php -u natas4:QryZXc2e0zahULdHrtHxzyYkj59kUxLQ --referer http://natas5.natas.labs.overthewire.org/
+```
+
+Access granted. The password for natas5 is 0n35PkggAPm2zbEpOU802c0x0Msn1ToK
+
+## Natas Level 4 → Level 5
+
+```
+Username:         natas5
+Next Password:    
+URL:              http://natas5.natas.labs.overthewire.org
+```
+
