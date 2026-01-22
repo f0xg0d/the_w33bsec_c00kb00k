@@ -125,7 +125,7 @@ Which exposed the secret for the 2nd login
 ```
 Username:         natas7
 Next Password:    xcoXLmzMkoIP9D7hlgPlh9XD7OgLAe5Q
-URL:              http://natas6.natas.labs.overthewire.org
+URL:              http://natas7.natas.labs.overthewire.org
 ```
 
 Therw are 2 buttons Home and About which open links like this [http://natas7.natas.labs.overthewire.org/index.php?page=about](http://natas7.natas.labs.overthewire.org/index.php?page=about)
@@ -152,8 +152,8 @@ Viewing the html file of the page revealed a hint for the correct file to access
 
 ```
 Username:         natas8
-Next Password:    
-URL:              http://natas6.natas.labs.overthewire.org
+Next Password:    ZE1ck82lmdGIoErlhQgWND6j2Wzz6b6t
+URL:              http://natas8.natas.labs.overthewire.org
 ```
 
 We are immediately shown a prompt to enter some sort of secret and a button to view the source code used for this field
@@ -176,3 +176,20 @@ if(array_key_exists("submit", $_POST)) {
 }
 ?>
 ```
+
+Putting the string into [CyberChef](https://gchq.github.io/CyberChef/) with the following recipe revealed the decoded string:
+
+Input: 3d3d516343746d4d6d6c315669563362\
+From Hex -> Reverse -> From Base64\
+Output: oubWYf2kBq
+
+Entering this secret into the field revealed the password for the level 9
+
+### Natas Level 8 → Level 9
+
+```
+Username:         natas9
+Next Password:    
+URL:              http://natas9.natas.labs.overthewire.org
+```
+
