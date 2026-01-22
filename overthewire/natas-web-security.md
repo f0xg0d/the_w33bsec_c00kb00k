@@ -89,7 +89,7 @@ Changing this value to **1** and refreshing the page revealed the password.
 
 > Access granted. The password for natas6 is 0RoJwHdSKWFTYR5WuiAewauSuNaBXned
 
-### Natas Level 5 → Level 6
+## Natas Level 5 → Level 6
 
 ```
 Username:         natas6
@@ -120,7 +120,7 @@ Which exposed the secret for the 2nd login
 
 > Access granted. The password for natas7 is bmg8SvU1LizuWjx3y7xkNERkHxGre0GS
 
-### Natas Level 6 → Level 7
+## Natas Level 6 → Level 7
 
 ```
 Username:         natas7
@@ -148,7 +148,7 @@ Testing for [http://natas7.natas.labs.overthewire.org/index.php?page=/etc/passwd
 Viewing the html file of the page revealed a hint for the correct file to access:\
 [http://natas7.natas.labs.overthewire.org/index.php?page=/etc/natas\_webpass/natas8](http://natas7.natas.labs.overthewire.org/index.php?page=/etc/natas_webpass/natas8)
 
-### Natas Level 7 → Level 8
+## Natas Level 7 → Level 8
 
 ```
 Username:         natas8
@@ -185,7 +185,7 @@ Output: oubWYf2kBq
 
 Entering this secret into the field revealed the password for the level 9
 
-### Natas Level 8 → Level 9
+## Natas Level 8 → Level 9
 
 ```
 Username:         natas9
@@ -221,7 +221,7 @@ Using the hint from level 7 I used the following command to get the next passwor
 test; cat /etc/natas_webpass/natas10
 ```
 
-#### Natas Level 9 → Level 10 <a href="#natas-level-8-level-9" id="natas-level-8-level-9"></a>
+## Natas Level 9 → Level 10 <a href="#natas-level-8-level-9" id="natas-level-8-level-9"></a>
 
 ```
 Username:         natas10
@@ -257,7 +257,7 @@ The following input revealed the next password
 . /etc/natas_webpass/natas11
 ```
 
-#### Natas Level 10 → Level 11 <a href="#natas-level-8-level-9" id="natas-level-8-level-9"></a>
+## Natas Level 10 → Level 11 <a href="#natas-level-8-level-9" id="natas-level-8-level-9"></a>
 
 ```
 Username:         natas11

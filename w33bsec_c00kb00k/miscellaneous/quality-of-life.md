@@ -38,10 +38,8 @@ function list_files {
 }
 
 # Start crawling from current directory
-echo "🔍 EXPLORING EVERY DARK CORNER... EVEN YOUR HIDDEN ONES 🔍"
+echo "🔍 EXPLORING 🔍"
 list_files "." ""
-
-echo "💀 NOTHING ESCAPES ME 💀"
 
 ```
 
