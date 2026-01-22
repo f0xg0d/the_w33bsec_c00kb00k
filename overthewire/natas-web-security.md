@@ -89,7 +89,7 @@ Changing this value to **1** and refreshing the page revealed the password.
 
 > Access granted. The password for natas6 is 0RoJwHdSKWFTYR5WuiAewauSuNaBXned
 
-### Natas Level 4 → Level 5
+### Natas Level 5 → Level 6
 
 ```
 Username:         natas6
@@ -99,7 +99,7 @@ URL:              http://natas6.natas.labs.overthewire.org
 
 The page now asks for a second password using the following, exposed script [View sourcecode](http://natas6.natas.labs.overthewire.org/index-source.html)
 
-```
+```javascript
 <?
 
 include "includes/secret.inc";
@@ -119,3 +119,60 @@ This leads us to the following directory and file:\
 Which exposed the secret for the 2nd login
 
 > Access granted. The password for natas7 is bmg8SvU1LizuWjx3y7xkNERkHxGre0GS
+
+### Natas Level 6 → Level 7
+
+```
+Username:         natas7
+Next Password:    xcoXLmzMkoIP9D7hlgPlh9XD7OgLAe5Q
+URL:              http://natas6.natas.labs.overthewire.org
+```
+
+Therw are 2 buttons Home and About which open links like this [http://natas7.natas.labs.overthewire.org/index.php?page=about](http://natas7.natas.labs.overthewire.org/index.php?page=about)
+
+Accessing a random page like [http://natas7.natas.labs.overthewire.org/index.php?page=password](http://natas7.natas.labs.overthewire.org/index.php?page=password)
+
+The site presents the following output
+
+> Warning: include(password): failed to open stream: No such file or directory in /var/www/natas/natas7/index.php on line 21
+>
+> Warning: include(): Failed opening 'password' for inclusion (include\_path='.:/usr/share/php') in /var/www/natas/natas7/index.php on line 21
+
+This output looks suspiciously vulnerable to [LFI](https://owasp.org/www-project-web-security-testing-guide/v42/4-Web_Application_Security_Testing/07-Input_Validation_Testing/11.1-Testing_for_Local_File_Inclusion)
+
+Testing for [http://natas7.natas.labs.overthewire.org/index.php?page=/etc/passwd](http://natas7.natas.labs.overthewire.org/index.php?page=/etc/passwd) proves this suspicion
+
+> root:x:0:0:root:/root:/bin/bash daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin bin:x:2:2:bin:/bin:/usr/sbin/nologin sys:x:3:3:sys:/dev:/usr/sbin/nologin sync:x:4:65534:sync:/bin:/bin/sync games:x:5:60:games:/usr/games:/usr/sbin/nologin man:x:6:12:man:/var/cache/man:/usr/sbin/nologin lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin mail:x:8:8:mail:/var/mail:/usr/ :x\
+> ...
+
+Viewing the html file of the page revealed a hint for the correct file to access:\
+[http://natas7.natas.labs.overthewire.org/index.php?page=/etc/natas\_webpass/natas8](http://natas7.natas.labs.overthewire.org/index.php?page=/etc/natas_webpass/natas8)
+
+### Natas Level 7 → Level 8
+
+```
+Username:         natas8
+Next Password:    
+URL:              http://natas6.natas.labs.overthewire.org
+```
+
+We are immediately shown a prompt to enter some sort of secret and a button to view the source code used for this field
+
+```javascript
+<?
+
+$encodedSecret = "3d3d516343746d4d6d6c315669563362";
+
+function encodeSecret($secret) {
+    return bin2hex(strrev(base64_encode($secret)));
+}
+
+if(array_key_exists("submit", $_POST)) {
+    if(encodeSecret($_POST['secret']) == $encodedSecret) {
+    print "Access granted. The password for natas9 is <censored>";
+    } else {
+    print "Wrong secret";
+    }
+}
+?>
+```
