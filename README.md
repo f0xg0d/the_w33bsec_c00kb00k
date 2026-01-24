@@ -20,9 +20,9 @@ description: Linux Chad c00kb00k that started focused on HTB/CTFs
   * [Quality of Life](w33bsec_c00kb00k/miscellaneous/quality-of-life.md)
   * [Troubleshooting](w33bsec_c00kb00k/miscellaneous/troubleshooting.md)
   * [Vim](w33bsec_c00kb00k/miscellaneous/vim.md)
-* [Proxying](w33bsec_c00kb00k/proxying-portforwarding.md)
-  * [Chisel](w33bsec_c00kb00k/proxying-portforwarding.md#chisel-and-proxychains-tunneling-and-pivoting)
-  * [SSH Local Port forwarding](w33bsec_c00kb00k/proxying-portforwarding.md#ssh-local-port-forwarding)
+* [Proxying](w33bsec_c00kb00k/proxying-port-forwarding.md)
+  * [Chisel](w33bsec_c00kb00k/proxying-port-forwarding.md#chisel-and-proxychains-tunneling-and-pivoting)
+  * [SSH Local Port forwarding](w33bsec_c00kb00k/proxying-port-forwarding.md#ssh-local-port-forwarding)
 * APK hacking
 * Web Application Hacking
 

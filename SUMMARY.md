@@ -16,7 +16,7 @@
   * [Quality of Life](w33bsec_c00kb00k/miscellaneous/quality-of-life.md)
   * [Troubleshooting](w33bsec_c00kb00k/miscellaneous/troubleshooting.md)
   * [Vim](w33bsec_c00kb00k/miscellaneous/vim.md)
-* [Proxying \ Port Forwarding](w33bsec_c00kb00k/proxying-portforwarding.md)
+* [Proxying \ Port Forwarding](w33bsec_c00kb00k/proxying-port-forwarding.md)
 
 ## OverTheWire
 
