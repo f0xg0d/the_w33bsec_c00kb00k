@@ -1,3 +1,21 @@
+---
+description: write-up my approach and solutions for the Natas wargames on overthewire.org
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+---
+
 # Natas - web security
 
 ## Intro
@@ -227,7 +245,7 @@ Using the hint from level 7 I used the following command to get the next passwor
 test; cat /etc/natas_webpass/natas10
 ```
 
-## Natas Level 10 <a href="#natas-level-8-level-9" id="natas-level-8-level-9"></a>
+## Natas Level 10 <a href="#natas-level-10" id="natas-level-10"></a>
 
 ```
 Username:         natas10
@@ -263,7 +281,7 @@ The following input revealed the next password
 . /etc/natas_webpass/natas11
 ```
 
-## Natas Level 11 <a href="#natas-level-8-level-9" id="natas-level-8-level-9"></a>
+## Natas Level 11 <a href="#natas-level-11" id="natas-level-11"></a>
 
 ```
 Username:         natas11
@@ -297,7 +315,7 @@ Output: New cookie with showpassword set to yes\
 \
 After swapping the cookie and reloading the page the password for the next level was shown.
 
-## Natas Level 12 <a href="#natas-level-8-level-9" id="natas-level-8-level-9"></a>
+## Natas Level 12 <a href="#natas-level-12" id="natas-level-12"></a>
 
 ```
 Username:         natas12
@@ -322,7 +340,7 @@ I tested this by selecting a text file with the following content to be uplaoded
 After uploading the file a link is presented, clicking it displays the password for the next level.\
 Confirming that the server indeed ran the uploaded PHP.
 
-## Natas Level 13 <a href="#natas-level-8-level-9" id="natas-level-8-level-9"></a>
+## Natas Level 13 <a href="#natas-level-13" id="natas-level-13"></a>
 
 ```
 Username:         natas13
@@ -350,7 +368,7 @@ Accessing the link after uploading the file presents us the following error:
 
 We need to add a value to the cmd parameter. Appending the URL with _?cmd=cat%20/etc/natas\_webpass/natas14_ showed the password for the next level.
 
-## Natas Level 14 <a href="#natas-level-8-level-9" id="natas-level-8-level-9"></a>
+## Natas Level 14 <a href="#natas-level-14" id="natas-level-14"></a>
 
 ```
 Username:         natas14
@@ -365,7 +383,7 @@ Knowing how these levels work this screamed SQL injection. Checking the sourceco
 
 Granting me access and showing the password for natas15
 
-## Natas Level 15 <a href="#natas-level-8-level-9" id="natas-level-8-level-9"></a>
+## Natas Level 15 <a href="#natas-level-15" id="natas-level-15"></a>
 
 ```
 Username:         natas15
