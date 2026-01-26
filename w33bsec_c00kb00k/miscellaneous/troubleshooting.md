@@ -1,6 +1,6 @@
 # Troubleshooting
 
-### 🕔 NTP sync with DC / KRB\_AP\_ERR\_SKEW(Clock skew too great)
+### NTP sync with DC / KRB\_AP\_ERR\_SKEW(Clock skew too great)
 
 ```bash
 sudo timedatectl set-local-rtc 0
@@ -8,7 +8,7 @@ sudo timedatectl set-ntp 1
 sudo ntpdate -u IP -b
 ```
 
-**📝** Explanation
+Explanation
 
 This set of commands is used to **synchronize the system time** with an **NTP (Network Time Protocol) server** and ensure the system clock is managed correctly.
 

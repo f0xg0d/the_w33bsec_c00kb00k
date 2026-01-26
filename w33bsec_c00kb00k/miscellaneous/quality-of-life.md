@@ -8,7 +8,7 @@ description: Quality of Life tools and scripts
 
 Penelope is a powerful shell handler built as a modern netcat replacement for RCE exploitation, aiming to simplify, accelerate, and optimize post-exploitation workflows.
 
-### 🌳 Tree replacement - Bash
+### Tree replacement - Bash (vibe coded af)
 
 ```bash
 #!/bin/bash

@@ -4,6 +4,10 @@ description: Linux Chad c00kb00k that started focused on HTB/CTFs
 
 # Start
 
+## w33bsec developed tools
+
+<table><thead><tr><th width="374">Name</th><th>Purpose</th></tr></thead><tbody><tr><td><a href="https://github.com/whatev33r/ReconRaccoon">ReconRacoon</a></td><td>Web Security Testing</td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr></tbody></table>
+
 ## Pages & Contents:
 
 * [Start](./)
@@ -23,9 +27,10 @@ description: Linux Chad c00kb00k that started focused on HTB/CTFs
 * [Proxying](w33bsec_c00kb00k/proxying-portforwarding.md)
   * [Chisel](w33bsec_c00kb00k/proxying-portforwarding.md#chisel-and-proxychains-tunneling-and-pivoting)
   * [SSH Local Port forwarding](w33bsec_c00kb00k/proxying-portforwarding.md#ssh-local-port-forwarding)
-* APK hacking
-* Web Application Hacking
+* APK
+* Web Application
 
 ## To-Do / Ideas:
 
 * [ ] Add MITRE | ATT\&CK references to techniques - [https://attack.mitre.org/](https://attack.mitre.org/)
+* [ ] EAdd more content ofc

