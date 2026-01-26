@@ -17,6 +17,7 @@ description: Linux Chad c00kb00k that started focused on HTB/CTFs
   * [Active Directory](w33bsec_c00kb00k/enumeration-recon/active-directory.md)
   * [Subdomains](w33bsec_c00kb00k/enumeration-recon/subdomains.md)
   * [Web: Files & Folders](w33bsec_c00kb00k/enumeration-recon/web-files-and-folders.md)
+* Exploitation
 * [Privilege Escalation](w33bsec_c00kb00k/privilege-escalation/)
   * [Linux](w33bsec_c00kb00k/privilege-escalation/linux.md)
   * [Windows](w33bsec_c00kb00k/privilege-escalation/windows.md)
@@ -33,4 +34,5 @@ description: Linux Chad c00kb00k that started focused on HTB/CTFs
 ## To-Do / Ideas:
 
 * [ ] Add MITRE | ATT\&CK references to techniques - [https://attack.mitre.org/](https://attack.mitre.org/)
-* [ ] EAdd more content ofc
+* [ ] Add more content ofc
+
