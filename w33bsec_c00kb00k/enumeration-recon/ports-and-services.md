@@ -1,14 +1,22 @@
 ---
 description: Nmap commands, localhost port scan and more
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # Ports & Services
-
-## Contents:
-
-* [Nmap Stealth Scan](ports-and-services.md#nmap-stealth-scan-with-service-and-script-detection)
-* [Nmap UDP Scan](ports-and-services.md#nmap-udp-scan-for-top-100-ports)
-* [Local Port Scanning with Bash](ports-and-services.md#local-port-scanning-with-bash)
 
 ## Nmap
 

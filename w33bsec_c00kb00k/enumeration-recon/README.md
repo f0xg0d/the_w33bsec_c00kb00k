@@ -1,8 +1,22 @@
 ---
 description: Commands and techniques relating to enumeration and discovery
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
-# Enumeration / Discovery
+# Enumeration / Recon
 
 ## Pages & Contents:
 

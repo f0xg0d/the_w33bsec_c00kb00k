@@ -1,7 +1,7 @@
 ---
 description: HackTheBox flowchart-style methodology
 layout:
-  width: default
+  width: wide
   title:
     visible: true
   description:
@@ -52,7 +52,7 @@ layout:
 * **SNMP:** `snmpwalk -v 2c -c public <IP>` (leaks usernames!)
 * **Check for misconfigurations, default creds, exploits**
 
-### **2. Exploitation & Shell Access**
+### [**2. Exploitation & Shell Access**](exploitation/)
 
 #### **2.1 - Search for Exploits**
 

@@ -1,16 +1,22 @@
 ---
 description: smb, ldap a good boy🐶 and everything in between
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # Active Directory
-
-## Contents:
-
-* [NetExec (nxc)](active-directory.md#netexec-nxc)
-* [SMB](active-directory.md#smb)
-* [BloodHou](active-directory.md#bloodhound)
-
-***
 
 ## NetExec (nxc)
 

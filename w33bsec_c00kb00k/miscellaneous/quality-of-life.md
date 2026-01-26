@@ -1,14 +1,28 @@
 ---
 description: Quality of Life tools and scripts
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # Quality of Life
 
-### [Penelope](https://github.com/brightio/penelope)
+## [Penelope](https://github.com/brightio/penelope)
 
 Penelope is a powerful shell handler built as a modern netcat replacement for RCE exploitation, aiming to simplify, accelerate, and optimize post-exploitation workflows.
 
-### Tree replacement - Bash (vibe coded af)
+## Tree replacement - Bash (vibe coded af)
 
 ```bash
 #!/bin/bash

@@ -1,13 +1,22 @@
 ---
 description: chisel, proxychains & ssh
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
 ---
 
 # Proxying \ Port Forwarding
-
-## Contents:
-
-* [Chisel](proxying-portforwarding.md#chisel-and-proxychains-tunneling-and-pivoting)
-* [SSH Local Port Forwarding](proxying-portforwarding.md#ssh-local-port-forwarding)
 
 ## Chisel & ProxyChains: Tunneling & Pivoting
 

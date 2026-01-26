@@ -376,12 +376,11 @@ Next Password:    SdqIqBsFcz3yotlNYErZSZwblkm0lrvx
 URL:              http://natas14.natas.labs.overthewire.org
 ```
 
-Knowing how these levels work this screamed SQL injection. Checking the sourcecode just confirmed this. There are various viable solutions to SQL. My first one was:
+Knowing how these levels work this screamed [SQL injection](../w33bsec_c00kb00k/exploitation/sql-injections.md). \
+Checking the sourcecode just confirmed this. There are various solutions. My first one was:
 
 **username:"--**\
 **password:"OR 1=1**
-
-Granting me access and showing the password for natas15
 
 ## Natas Level 15 <a href="#natas-level-15" id="natas-level-15"></a>
 

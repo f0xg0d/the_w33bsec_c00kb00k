@@ -1,6 +1,23 @@
+---
+layout:
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+---
+
 # Troubleshooting
 
-### NTP sync with DC / KRB\_AP\_ERR\_SKEW(Clock skew too great)
+## NTP sync with DC / KRB\_AP\_ERR\_SKEW(Clock skew too great) <a href="#clock-skew-too-great" id="clock-skew-too-great"></a>
 
 ```bash
 sudo timedatectl set-local-rtc 0
