@@ -1,26 +1,12 @@
 ---
 description: Linux Chad c00kb00k that started focused on HTB/CTFs
-layout:
-  width: wide
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
-  metadata:
-    visible: true
 ---
 
 # Start
 
-## w33bsec developed tools
+## w33bsec developed tools (not hacking exclusive)
 
-<table><thead><tr><th width="286">Name</th><th>Purpose</th></tr></thead><tbody><tr><td><a href="https://github.com/whatev33r/ReconRaccoon">ReconRacoon</a></td><td>Web Security Testing</td></tr></tbody></table>
+<table><thead><tr><th width="286">Name</th><th>Purpose / Description</th></tr></thead><tbody><tr><td><a href="https://github.com/whatev33r/ReconRaccoon">ReconRacoon</a></td><td>Web Security Testing</td></tr><tr><td><a href="https://github.com/f0xg0d/jplate">jplate</a></td><td>Japanese Translate - CLI Japanese dictionary and translation tool built on <a href="https://github.com/scriptin/jmdict-simplified">JMdict</a> and <a href="https://www.deepl.com/en/products/api">DeepL</a></td></tr></tbody></table>
 
 ## Pages & Contents:
 
