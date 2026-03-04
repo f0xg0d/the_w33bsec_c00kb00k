@@ -1,19 +1,5 @@
 ---
 description: write-up my approach and solutions for the Natas wargames on overthewire.org
-layout:
-  width: wide
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
-  metadata:
-    visible: true
 ---
 
 # Natas - web security
@@ -429,7 +415,7 @@ while True:
 
 <figure><img src="../.gitbook/assets/image (3).png" alt="" width="265"><figcaption></figcaption></figure>
 
-## Level 16
+## Natas Level 16
 
 ```
 Username:         natas16
