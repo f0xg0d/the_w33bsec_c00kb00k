@@ -1,19 +1,5 @@
 ---
 description: smb, ldap a good boy🐶 and everything in between
-layout:
-  width: wide
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
-  metadata:
-    visible: true
 ---
 
 # Active Directory
@@ -49,16 +35,18 @@ nxc ldap <IP> -u 'USER' -p 'PASS' --active-users
 ```bash
 smbclient --no-pass -L <IP>
 smbclient \\\\<IP>\\SHARE$ -N
+smbclient \\\\<IP>\\ --user=USER%PASSWORD
 ```
 
 #### Explanation
 
-| Option             | Description                                                                               |
-| ------------------ | ----------------------------------------------------------------------------------------- |
-| `--no-pass`        | Connects **without requiring a password**, useful when **guest access** is enabled        |
-| `-L <IP>`          | Lists **available SMB shares** on the target system                                       |
-| `\\\\<IP>\\SHARE$` | Connects to the **SHARE$ share** (doubled `\` is required in Bash to escape `\` properly) |
-| `-N`               | **No authentication prompt**, attempts **anonymous access**                               |
+| Option             | Description                                                                                                                    |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
+| `--no-pass`        | Connects **without requiring a password**, useful when **guest access** is enabled                                             |
+| `-L <IP>`          | Lists **available SMB shares** on the target system                                                                            |
+| `\\\\<IP>\\SHARE$` | Connects to the **SHARE$ share** (doubled `\` is required in Bash to escape `\` properly)                                      |
+| `-N`               | **No authentication prompt**, attempts **anonymous access**                                                                    |
+| --user=USER        | Specify user to use for authentication password can be entered via interactive input afterwards or send directly via %PASSWORD |
 
 ***
 
